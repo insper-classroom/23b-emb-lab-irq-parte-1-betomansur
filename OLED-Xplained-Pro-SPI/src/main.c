@@ -32,7 +32,8 @@ volatile char but_flag2;
 volatile char but_flag3;
 volatile char pino_cima;
 volatile int aumento = 0;
-int tempo = 0;
+volatile int tempo = 0;
+
 
 
 void but_callback3(void){
@@ -47,11 +48,13 @@ void but_callback2(void){
 void but_callback(void)
 
 {
+
 	if (!but_flag)
 	{
 		if (pio_get(BUT_PIO, PIO_INPUT, BUT_IDX_MASK)) {
 			// PINO == 1 --> Borda de subida
 			pino_cima = 1;
+
 			if (tempo < 2000){
 				aumento ++;
 			}
