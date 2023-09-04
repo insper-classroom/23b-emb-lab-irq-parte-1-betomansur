@@ -99,7 +99,7 @@ void io_init(void)
 
 	// Inicializa clock do periférico PIO responsavel pelo botao
 	pmc_enable_periph_clk(BUT_PIO_ID);
-		pmc_enable_periph_clk(BUT2_PIO_ID);
+	pmc_enable_periph_clk(BUT2_PIO_ID);
 
 	pmc_enable_periph_clk(BUT3_PIO_ID);
 
@@ -129,19 +129,19 @@ void io_init(void)
 	PIO_IT_RISE_EDGE,
 	but_callback2);
 	
-		pio_handler_set(BUT2_PIO,
-		BUT2_PIO_ID,
-		BUT2_IDX_MASK,
-		PIO_IT_RISE_EDGE,
-		but_callback3);
+	pio_handler_set(BUT2_PIO,
+	BUT2_PIO_ID,
+	BUT2_IDX_MASK,
+	PIO_IT_RISE_EDGE,
+	but_callback3);
 
 	// Ativa interrupção e limpa primeira IRQ gerada na ativacao
 	pio_enable_interrupt(BUT_PIO, BUT_IDX_MASK);
 	pio_get_interrupt_status(BUT_PIO);
 	
-		pio_enable_interrupt(BUT2_PIO, BUT2_IDX_MASK);
-		pio_get_interrupt_status(BUT2_PIO);
-		
+	pio_enable_interrupt(BUT2_PIO, BUT2_IDX_MASK);
+	pio_get_interrupt_status(BUT2_PIO);
+	
 	
 	pio_enable_interrupt(BUT3_PIO, BUT3_IDX_MASK);
 	pio_get_interrupt_status(BUT3_PIO);
@@ -151,8 +151,8 @@ void io_init(void)
 	NVIC_EnableIRQ(BUT_PIO_ID);
 	NVIC_SetPriority(BUT_PIO_ID, 4); // Prioridade 4
 	
-		NVIC_EnableIRQ(BUT2_PIO_ID);
-		NVIC_SetPriority(BUT2_PIO_ID, 3); // Prioridade 4
+	NVIC_EnableIRQ(BUT2_PIO_ID);
+	NVIC_SetPriority(BUT2_PIO_ID, 3); // Prioridade 4
 	
 	NVIC_EnableIRQ(BUT3_PIO_ID);
 	NVIC_SetPriority(BUT3_PIO_ID, 3); // Prioridade 4
