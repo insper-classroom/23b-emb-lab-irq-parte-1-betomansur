@@ -31,10 +31,9 @@ volatile char but_flag;
 volatile char but_flag2;
 volatile char but_flag3;
 volatile char pino_cima;
-volatile char ja_clicado;
-volatile char subiu;
-volatile char desceu;
 volatile int aumento = 0;
+int tempo = 0;
+
 
 void but_callback3(void){
 	but_flag3 = 1;
