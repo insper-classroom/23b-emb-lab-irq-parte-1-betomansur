@@ -72,7 +72,7 @@ volatile char ja_clicado;
 volatile char subiu;
 volatile char desceu;
 int aumento;
-int tempo;
+volatile int tempo;
 
 void but_callback(void)
 
