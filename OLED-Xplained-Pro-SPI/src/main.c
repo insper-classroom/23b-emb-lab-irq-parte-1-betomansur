@@ -35,7 +35,6 @@ volatile char ja_clicado;
 volatile char subiu;
 volatile char desceu;
 volatile int aumento = 0;
-volatile int tempo = 0;
 
 void but_callback3(void){
 	but_flag3 = 1;
