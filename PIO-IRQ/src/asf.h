@@ -71,6 +71,12 @@
 // From module: Flash - SAM Flash Service API
 #include <flash_efc.h>
 
+// From module: GFX Color - Color Graphic Library
+#include <gfx.h>
+
+// From module: GFX Color - System Font
+#include <sysfont.h>
+
 // From module: GPIO - General purpose Input/Output
 #include <gpio.h>
 
@@ -82,6 +88,9 @@
 
 // From module: Interrupt management - SAM implementation
 #include <interrupt.h>
+
+// From module: LCD - ILI9341 Display Controller
+#include <ili9341.h>
 
 // From module: MPU - Memory Protect Unit
 #include <mpu.h>
